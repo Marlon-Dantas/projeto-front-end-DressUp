@@ -1,175 +1,102 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Definição da paleta de cores em variáveis CSS */
 :root {
-    --color1: #aa9f65;
-    --color2: #4b4b4be1;
-    --color3: #4b4b4be1;
-    --color4: #dd1111;
-    --color5: #ffffff;
-    --color6: #000000;
-    --color7: #4b4b4be1;
+  --cor-destaque: #aa9f65; /* Bege */
+  --cor-fundo: #ffffff;    /* Branco */
+  --cor-texto: #000000;    /* Preto */
+  --cor-cinza: #4b4b4be1; /* Cinza para textos secundários ou fundos */
 }
 
-* { 
-  margin: 0; 
-  padding: 0; 
-  box-sizing: border-box; 
+/* ==================== NAVBAR ==================== */
+
+/* Estilo principal da barra de navegação */
+.navbar.bg-dark {
+  background-color: #000000 !important; /* Força o preto que você pediu */
+  border-bottom: 1px solid var(--cor-destaque); /* Borda inferior com a cor de destaque (bege) */
 }
 
-/* Garante que html e body ocupem 100% da altura da viewport */
-html, body {
-  height: 100%;
+/* Estilo para todos os links da navegação */
+.navbar-nav .nav-link {
+  color: #ffffff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  margin: 0 0.5rem; /* Adiciona um pequeno espaçamento entre os links */
 }
 
-/* Define o body como container flex vertical */
-body { 
-  font-family: Arial, sans-serif; 
-  color: var(--color1); 
-  background: var(--color2);
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+/* Efeito HOVER: Muda a cor do link ao passar o mouse */
+.navbar-nav .nav-link:hover {
+  color: var(--cor-destaque); /* Usa a variável de cor bege (#aa9f65) */
 }
 
-/* A área principal deve expandir para empurrar o footer para baixo */
-main {
-  flex: 1;
+/* Estilo para o link da PÁGINA ATUAL (classe .active) */
+.navbar-nav .nav-link.active {
+  color: var(--cor-destaque);
+  font-weight: bold;
 }
 
-section.banner { 
-  text-align: center; 
-  padding: 4rem 1rem; 
-  background: var(--color3); 
-  color: var(--color1); 
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
 }
 
-/* Filtro de categorias */
-.filter { 
-  display: flex; 
-  gap: 0.5rem; 
-  justify-content: center; 
-  padding: 1rem; 
-  background: var(--color2); 
+/* --- SEÇÃO BANNER --- */
+.banner {
+  background-color: var(--cor-cinza);
 }
 
-.filter button {
-  background: var(--color4);
-  color: var(--color2);
+/* --- FILTROS --- */
+.filter .btn-outline-dark {
+  border-color: var(--cor-texto);
+  color: var(--cor-texto);
+}
+
+/* Estilo do botão de filtro ativo e hover */
+.filter .btn-outline-dark.active,
+.filter .btn-outline-dark:hover {
+  background-color: var(--cor-destaque);
+  color: var(--cor-fundo);
+  border-color: var(--cor-destaque);
+}
+
+/* --- CARDS DE PRODUTO --- */
+.produto-card .card {
+  border: 1px solid #eee;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produto-card .card:hover {
+  transform: scale(1.03); /* Efeito de zoom no hover */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1) !important; /* Sombra mais pronunciada */
+}
+
+.produto-card .card-img-top {
+  width: 100%;
+  height: 250px; /* Altura fixa para as imagens */
+  object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+}
+
+.produto-card .price {
+  color: var(--cor-destaque);
+}
+
+/* --- BOTÃO CUSTOMIZADO --- */
+.btn-custom {
+  background-color: var(--cor-destaque);
+  color: var(--cor-fundo);
   border: none;
-  padding: 0.5rem 1rem;
   border-radius: 0.25rem;
-  cursor: pointer;
-  transition: background 0.3s;
+  padding: 0.6rem 1.5rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
 }
 
-.filter button.active,
-.filter button:hover {
-  background: var(--color5);
+.btn-custom:hover {
+  background-color: #928650; /* Um tom de bege um pouco mais escuro para o hover */
+  color: var(--cor-fundo);
 }
 
-.btn { 
-  background: var(--color4); 
-  color: var(--color2); 
-  padding: 0.75rem 1.5rem; 
-  border-radius: 0.5rem; 
-  text-decoration: none; 
-  transition: background 0.3s; 
+/* --- FOOTER --- */
+footer a:hover {
+  color: var(--cor-destaque) !important;
 }
-
-.btn:hover { 
-  background: var(--color5); 
-}
-
-.produtos { 
-  padding: 2rem 1rem; 
-}
-
-.grid { 
-  display: grid; 
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-  gap: 1.5rem; 
-}
-
-.produto-card {
-    background: var(--color2);
-    border: 1px solid var(--color3);
-    border-radius: 0.75rem;
-    overflow: hidden;
-    text-align: center;
-    transition: transform 0.2s;
-    
-    /* Adicionado: define o cartão como um container flex em coluna */
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Garante que os elementos internos sejam espaçados corretamente */
-  .produto-card img {
-    /* Mantém o comportamento de imagem */
-    width: 100%;
-    height: auto;
-  }
-  
-  .produto-card h3 {
-    margin: 1rem 0 0.5rem;
-  }
-  
-  .produto-card p {
-    padding: 0 1rem;
-    /* Se preferir limitar a altura e evitar que a descrição ultrapasse, pode adicionar: */
-    /* max-height: 4.5rem; overflow: hidden; */
-  }
-  
-  .produto-card .price {
-    font-weight: bold;
-    margin-bottom: 1rem;
-    display: block;
-  }
-  
-  /* Ajusta o botão para ser empurrado para o final do cartão */
-  .produto-card .btn {
-    background: var(--color4);
-    color: var(--color2);
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    transition: background 0.3s;
-    
-    /* Com a regra abaixo, o botão fica sempre na parte de baixo do cartão */
-    margin-top: auto;
-  }
-  
-  .produto-card .btn:hover {
-    background: var(--color5);
-  }
-  
-
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background: var(--color1);
-    color: var(--color2);
-    font-size: 0.9rem;
-  }
-  
-  footer section {
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Reduzindo o tamanho dos títulos e textos para um design mais minimalista */
-  footer section h2 {
-    font-size: 1rem;
-    margin-bottom: 0.2rem;
-  }
-  
-  footer section p {
-    font-size: 0.85rem;
-    margin: 0;
-  }

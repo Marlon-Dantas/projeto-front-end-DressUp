@@ -1,231 +1,387 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DressUp - Produtos</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
   <link rel="stylesheet" href="css/produtos.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">DressUp</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="SOBRE-NOS-JOAO.HTML">Sobre Nós</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="PRODUTOS-MARLON.html">Nossos Produtos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="TELA-LOGIN-PAULO.html">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
   <main>
-    <section id="home" class="banner">
-      <h1>Bem-vindo à DressUp</h1>
-      <p>Seu estilo, sua identidade.</p>
-    </section>
-    <section id="produtos" class="produtos">
-      <h2>Nossos Produtos</h2>
-      <!-- Filtro de categorias -->
-      <div class="filter">
-        <button data-cat="all" class="active">Todos</button>
-        <button data-cat="camisas">Camisas</button>
-        <button data-cat="calcas">Calças</button>
-        <button data-cat="vestidos">Vestidos</button>
-        <button data-cat="acessorios">Acessórios</button>
-      </div>
-
-      <div class="grid">
-        <!-- Categoria: Camisas -->
-        <article class="produto-card" data-category="camisas">
-          <img src="imagens/produtos/camisa social branca.webp" alt="Camisa Social Branca">
-          <h3>Camisa Social Branca</h3>
-          <p>Elegância e estilo para ambientes formais.</p>
-          <span class="price">R$ 119,90</span>
-          <a href="#" class="btn">Saiba Mais</a>
-        </article>
-
-        <article class="produto-card" data-category="camisas">
-          <img src="imagens/produtos/camisa social azul.webp" alt="Camisa Social Azul">
-          <h3>Camisa Social Azul</h3>
-          <p>Conforto e sofisticação para o trabalho.</p>
-          <span class="price">R$ 129,90</span>
-          <a href="#" class="btn">Saiba Mais</a>
-        </article>
-
-        <article class="produto-card" data-category="camisas">
-          <img src="imagens/produtos/camisa polo preta.webp" alt="Camisa Polo Preta">
-          <h3>Camisa Polo Preta</h3>
-          <p>Estilo casual com toque esportivo.</p>
-          <span class="price">R$ 89,90</span>
-          <a href="#" class="btn">Saiba Mais</a>
-        </article>
-
-        <article class="produto-card" data-category="camisas">
-          <img src="imagens/produtos/camisa xadres vermelha.jpg" alt="Camisa Xadrez Vermelha">
-          <h3>Camisa Xadrez Vermelha</h3>
-          <p>Ideal para um visual casual moderno.</p>
-          <span class="price">R$ 99,90</span>
-          <a href="#" class="btn">Saiba Mais</a>
-        </article>
-
-        <article class="produto-card" data-category="camisas">
-          <img src="imagens/produtos/camisa listrada cinza.jpg" alt="Camisa Listrada Cinza">
-          <h3>Camisa Listrada Cinza</h3>
-          <p>Design moderno com listras sutis.</p>
-          <span class="price">R$ 109,90</span>
-          <a href="#" class="btn">Saiba Mais</a>
-        </article>
-
-        <!-- Categoria: Calças -->
-        <article class="produto-card" data-category="calcas">
-          <img src="imagens/produtos/calça skinny.jpg" alt="Calça Jeans Skinny">
-          <h3>Calça Jeans Skinny</h3>
-          <p>Corte moderno e ajuste perfeito para o dia a dia.</p>
-          <span class="price">R$ 159,90</span>
-          <a href="#" class="btn">Saiba Mais</a>
-        </article>
-
-        <article class="produto-card" data-category="calcas">
-          <img src="imagens/produtos/calça jeans reta.jpg" alt="Calça Jeans Reta">
-          <h3>Calça Jeans Reta</h3>
-          <p>Versátil e confortável para qualquer ocasião.</p>
-          <span class="price">R$ 149,90</span>
-          <a href="#" class="btn">Saiba Mais</a>
-        </article>
-
-        <article class="produto-card" data-category="calcas">
-          <img src="imagens/produtos/calça de alfaiataria.jpg" alt="Calça de Alfaiataria Preta">
-          <h3>Calça de Alfaiataria Preta</h3>
-          <p>Perfeita para ambientes formais com acabamento sofisticado.</p>
-          <span class="price">R$ 199,90</span>
-          <a href="#" class="btn">Saiba Mais</a>
-        </article>
-
-        <article class="produto-card" data-category="calcas">
-          <img src="imagens/produtos/calça cargo verde.jpg" alt="Calça Cargo Verde">
-          <h3>Calça Cargo Verde</h3>
-          <p>Funcional e estilosa, com bolsos utilitários.</p>
-          <span class="price">R$ 139,90</span>
-          <a href="#" class="btn">Saiba Mais</a>
-        </article>
-
-        <article class="produto-card" data-category="calcas">
-          <img src="imagens/produtos/calça sarja bege.jpg" alt="Calça de Sarja Bege">
-          <h3>Calça de Sarja Bege</h3>
-          <p>Praticidade e conforto para o cotidiano.</p>
-          <span class="price">R$ 129,90</span>
-          <a href="#" class="btn">Saiba Mais</a>
-        </article>
-
-        <!-- Categoria: Acessórios -->
-        <article class="produto-card" data-category="acessorios">
-          <img src="imagens/produtos/cinto de couro marrom.jpg" alt="Cinto de Couro Marrom">
-          <h3>Cinto de Couro Marrom</h3>
-          <p>Acabamento premium em couro legítimo.</p>
-          <span class="price">R$ 59,90</span>
-          <a href="#" class="btn">Saiba Mais</a>
-        </article>
-
-        <article class="produto-card" data-category="acessorios">
-          <img src="imagens/produtos/bone preto classico.jpg" alt="Boné Preto Clássico">
-          <h3>Boné Preto Clássico</h3>
-          <p>Design atemporal e versátil para qualquer look.</p>
-          <span class="price">R$ 49,90</span>
-          <a href="#" class="btn">Saiba Mais</a>
-        </article>
-
-        <article class="produto-card" data-category="acessorios">
-          <img src="imagens/produtos/oculos de sool retro.jpg" alt="Óculos de Sol Retro">
-          <h3>Óculos de Sol Retro</h3>
-          <p>Proteção e estilo com armação clássica.</p>
-          <span class="price">R$ 89,90</span>
-          <a href="#" class="btn">Saiba Mais</a>
-        </article>
-
-        <article class="produto-card" data-category="acessorios">
-          <img src="imagens/produtos/relogio minimalista.jpg" alt="Relógio Minimalista">
-          <h3>Relógio Minimalista</h3>
-          <p>Design clean que complementa qualquer visual.</p>
-          <span class="price">R$ 199,90</span>
-          <a href="#" class="btn">Saiba Mais</a>
-        </article>
-
-        <article class="produto-card" data-category="acessorios">
-          <img src="imagens/produtos/pulseira de couro.jpg" alt="Pulseira de Couro">
-          <h3>Pulseira de Couro</h3>
-          <p>Detalhe sofisticado para valorizar seu pulso.</p>
-          <span class="price">R$ 39,90</span>
-          <a href="#" class="btn">Saiba Mais</a>
-        </article>
-
-        <!-- Categoria: Vestidos -->
-        <article class="produto-card" data-category="vestidos">
-          <img src="imagens/produtos/vestido flora leve.jpg" alt="Vestido Floral Leve">
-          <h3>Vestido Floral Leve</h3>
-          <p>Estampa delicada e fluida, perfeita para o verão.</p>
-          <span class="price">R$ 139,90</span>
-          <a href="#" class="btn">Saiba Mais</a>
-        </article>
-
-        <article class="produto-card" data-category="vestidos">
-          <img src="imagens/produtos/vestido preto elegante.jpg" alt="Vestido Preto Elegante">
-          <h3>Vestido Preto Elegante</h3>
-          <p>Clássico e sofisticado para eventos especiais.</p>
-          <span class="price">R$ 199,90</span>
-          <a href="#" class="btn">Saiba Mais</a>
-        </article>
-
-        <article class="produto-card" data-category="vestidos">
-          <img src="imagens/produtos/vestido midi azul.jpg" alt="Vestido Midi Azul">
-          <h3>Vestido Midi Azul</h3>
-          <p>Comprimento ideal para um visual moderno e delicado.</p>
-          <span class="price">R$ 169,90</span>
-          <a href="#" class="btn">Saiba Mais</a>
-        </article>
-
-        <article class="produto-card" data-category="vestidos">
-          <img src="imagens/produtos/vestido longo vermelho.jpg" alt="Vestido Longo Vermelho">
-          <h3>Vestido Longo Vermelho</h3>
-          <p>Impactante e vibrante para ocasiões marcantes.</p>
-          <span class="price">R$ 229,90</span>
-          <a href="#" class="btn">Saiba Mais</a>
-        </article>
-
-        <article class="produto-card" data-category="vestidos">
-          <img src="imagens/produtos/vestido curto estampado.jpg" alt="Vestido Curto Estampado">
-          <h3>Vestido Curto Estampado</h3>
-          <p>Modelo divertido com estampa única para dias casuais.</p>
-          <span class="price">R$ 149,90</span>
-          <a href="#" class="btn">Saiba Mais</a>
-        </article>
+    <section id="home" class="banner text-center text-white py-5">
+      <div class="container">
+        <h1 class="display-4">Bem-vindo à DressUp</h1>
+        <p class="lead">Seu estilo, sua identidade.</p>
       </div>
     </section>
 
+    <section id="produtos" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Nossos Produtos</h2>
+
+        <div class="filter d-flex justify-content-center gap-2 mb-5">
+          <button data-cat="all" class="btn btn-outline-dark active">Todos</button>
+          <button data-cat="camisas" class="btn btn-outline-dark">Camisas</button>
+          <button data-cat="calcas" class="btn btn-outline-dark">Calças</button>
+          <button data-cat="vestidos" class="btn btn-outline-dark">Vestidos</button>
+          <button data-cat="acessorios" class="btn btn-outline-dark">Acessórios</button>
+        </div>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+
+          <div class="col produto-card" data-category="camisas">
+            <div class="card h-100 shadow-sm">
+              <img src="imagens/produtos/camisa social branca.webp" class="card-img-top" alt="Camisa Social Branca">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Camisa Social Branca</h3>
+                <p class="card-text">Elegância e estilo para ambientes formais.</p>
+                <span class="price fs-5 fw-bold my-2">R$ 119,90</span>
+                <a href="#" class="btn btn-custom mt-auto">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col produto-card" data-category="camisas">
+            <div class="card h-100 shadow-sm">
+              <img src="imagens/produtos/camisa social azul.webp" class="card-img-top" alt="Camisa Social Azul">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Camisa Social Azul</h3>
+                <p class="card-text">Conforto e sofisticação para o trabalho.</p>
+                <span class="price fs-5 fw-bold my-2">R$ 129,90</span>
+                <a href="#" class="btn btn-custom mt-auto">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col produto-card" data-category="camisas">
+            <div class="card h-100 shadow-sm">
+              <img src="imagens/produtos/camisa polo preta.webp" class="card-img-top" alt="Camisa Polo Preta">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Camisa Polo Preta</h3>
+                <p class="card-text">Estilo casual com toque esportivo.</p>
+                <span class="price fs-5 fw-bold my-2">R$ 89,90</span>
+                <a href="#" class="btn btn-custom mt-auto">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col produto-card" data-category="camisas">
+            <div class="card h-100 shadow-sm">
+              <img src="imagens/produtos/camisa xadres vermelha.jpg" class="card-img-top" alt="Camisa Xadrez Vermelha">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Camisa Xadrez Vermelha</h3>
+                <p class="card-text">Ideal para um visual casual moderno.</p>
+                <span class="price fs-5 fw-bold my-2">R$ 99,90</span>
+                <a href="#" class="btn btn-custom mt-auto">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col produto-card" data-category="camisas">
+            <div class="card h-100 shadow-sm">
+              <img src="imagens/produtos/camisa listrada cinza.jpg" class="card-img-top" alt="Camisa Listrada Cinza">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Camisa Listrada Cinza</h3>
+                <p class="card-text">Design moderno com listras sutis.</p>
+                <span class="price fs-5 fw-bold my-2">R$ 109,90</span>
+                <a href="#" class="btn btn-custom mt-auto">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col produto-card" data-category="calcas">
+            <div class="card h-100 shadow-sm">
+              <img src="imagens/produtos/calça skinny.jpg" class="card-img-top" alt="Calça Jeans Skinny">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Calça Jeans Skinny</h3>
+                <p class="card-text">Corte moderno e ajuste perfeito para o dia a dia.</p>
+                <span class="price fs-5 fw-bold my-2">R$ 159,90</span>
+                <a href="#" class="btn btn-custom mt-auto">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col produto-card" data-category="calcas">
+            <div class="card h-100 shadow-sm">
+              <img src="imagens/produtos/calça jeans reta.jpg" class="card-img-top" alt="Calça Jeans Reta">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Calça Jeans Reta</h3>
+                <p class="card-text">Versátil e confortável para qualquer ocasião.</p>
+                <span class="price fs-5 fw-bold my-2">R$ 149,90</span>
+                <a href="#" class="btn btn-custom mt-auto">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col produto-card" data-category="calcas">
+            <div class="card h-100 shadow-sm">
+              <img src="imagens/produtos/calça de alfaiataria.jpg" class="card-img-top"
+                alt="Calça de Alfaiataria Preta">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Calça de Alfaiataria</h3>
+                <p class="card-text">Perfeita para ambientes formais com acabamento sofisticado.</p>
+                <span class="price fs-5 fw-bold my-2">R$ 199,90</span>
+                <a href="#" class="btn btn-custom mt-auto">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col produto-card" data-category="calcas">
+            <div class="card h-100 shadow-sm">
+              <img src="imagens/produtos/calça cargo verde.jpg" class="card-img-top" alt="Calça Cargo Verde">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Calça Cargo Verde</h3>
+                <p class="card-text">Funcional e estilosa, com bolsos utilitários.</p>
+                <span class="price fs-5 fw-bold my-2">R$ 139,90</span>
+                <a href="#" class="btn btn-custom mt-auto">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col produto-card" data-category="calcas">
+            <div class="card h-100 shadow-sm">
+              <img src="imagens/produtos/calça sarja bege.jpg" class="card-img-top" alt="Calça de Sarja Bege">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Calça de Sarja Bege</h3>
+                <p class="card-text">Praticidade e conforto para o cotidiano.</p>
+                <span class="price fs-5 fw-bold my-2">R$ 129,90</span>
+                <a href="#" class="btn btn-custom mt-auto">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col produto-card" data-category="acessorios">
+            <div class="card h-100 shadow-sm">
+              <img src="imagens/produtos/cinto de couro marrom.jpg" class="card-img-top" alt="Cinto de Couro Marrom">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Cinto de Couro Marrom</h3>
+                <p class="card-text">Acabamento premium em couro legítimo.</p>
+                <span class="price fs-5 fw-bold my-2">R$ 59,90</span>
+                <a href="#" class="btn btn-custom mt-auto">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col produto-card" data-category="acessorios">
+            <div class="card h-100 shadow-sm">
+              <img src="imagens/produtos/bone preto classico.jpg" class="card-img-top" alt="Boné Preto Clássico">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Boné Preto Clássico</h3>
+                <p class="card-text">Design atemporal e versátil para qualquer look.</p>
+                <span class="price fs-5 fw-bold my-2">R$ 49,90</span>
+                <a href="#" class="btn btn-custom mt-auto">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col produto-card" data-category="acessorios">
+            <div class="card h-100 shadow-sm">
+              <img src="imagens/produtos/oculos de sool retro.jpg" class="card-img-top" alt="Óculos de Sol Retro">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Óculos de Sol Retro</h3>
+                <p class="card-text">Proteção e estilo com armação clássica.</p>
+                <span class="price fs-5 fw-bold my-2">R$ 89,90</span>
+                <a href="#" class="btn btn-custom mt-auto">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col produto-card" data-category="acessorios">
+            <div class="card h-100 shadow-sm">
+              <img src="imagens/produtos/relogio minimalista.jpg" class="card-img-top" alt="Relógio Minimalista">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Relógio Minimalista</h3>
+                <p class="card-text">Design clean que complementa qualquer visual.</p>
+                <span class="price fs-5 fw-bold my-2">R$ 199,90</span>
+                <a href="#" class="btn btn-custom mt-auto">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col produto-card" data-category="acessorios">
+            <div class="card h-100 shadow-sm">
+              <img src="imagens/produtos/pulseira de couro.jpg" class="card-img-top" alt="Pulseira de Couro">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Pulseira de Couro</h3>
+                <p class="card-text">Detalhe sofisticado para valorizar seu pulso.</p>
+                <span class="price fs-5 fw-bold my-2">R$ 39,90</span>
+                <a href="#" class="btn btn-custom mt-auto">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col produto-card" data-category="vestidos">
+            <div class="card h-100 shadow-sm">
+              <img src="imagens/produtos/vestido flora leve.jpg" class="card-img-top" alt="Vestido Floral Leve">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Vestido Floral Leve</h3>
+                <p class="card-text">Estampa delicada e fluida, perfeita para o verão.</p>
+                <span class="price fs-5 fw-bold my-2">R$ 139,90</span>
+                <a href="#" class="btn btn-custom mt-auto">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col produto-card" data-category="vestidos">
+            <div class="card h-100 shadow-sm">
+              <img src="imagens/produtos/vestido preto elegante.jpg" class="card-img-top" alt="Vestido Preto Elegante">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Vestido Preto Elegante</h3>
+                <p class="card-text">Clássico e sofisticado para eventos especiais.</p>
+                <span class="price fs-5 fw-bold my-2">R$ 199,90</span>
+                <a href="#" class="btn btn-custom mt-auto">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col produto-card" data-category="vestidos">
+            <div class="card h-100 shadow-sm">
+              <img src="imagens/produtos/vestido midi azul.jpg" class="card-img-top" alt="Vestido Midi Azul">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Vestido Midi Azul</h3>
+                <p class="card-text">Comprimento ideal para um visual moderno e delicado.</p>
+                <span class="price fs-5 fw-bold my-2">R$ 169,90</span>
+                <a href="#" class="btn btn-custom mt-auto">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col produto-card" data-category="vestidos">
+            <div class="card h-100 shadow-sm">
+              <img src="imagens/produtos/vestido longo vermelho.jpg" class="card-img-top" alt="Vestido Longo Vermelho">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Vestido Longo Vermelho</h3>
+                <p class="card-text">Impactante e vibrante para ocasiões marcantes.</p>
+                <span class="price fs-5 fw-bold my-2">R$ 229,90</span>
+                <a href="#" class="btn btn-custom mt-auto">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col produto-card" data-category="vestidos">
+            <div class="card h-100 shadow-sm">
+              <img src="imagens/produtos/vestido curto estampado.jpg" class="card-img-top"
+                alt="Vestido Curto Estampado">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Vestido Curto Estampado</h3>
+                <p class="card-text">Modelo divertido com estampa única para dias casuais.</p>
+                <span class="price fs-5 fw-bold my-2">R$ 149,90</span>
+                <a href="#" class="btn btn-custom mt-auto">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+    </section>
   </main>
 
-  <footer>
-    <div class="footer-secoes">
-      <section id="sobre" class="sobre">
-        <h2>Sobre a DressUp</h2>
-        <p>Conheça nossa missão, valores e equipe.</p>
-      </section>
+  <footer class="bg-dark text-white pt-5 pb-4">
+    <div class="container text-center text-md-start">
+      <div class="row text-center text-md-start">
 
-      <section id="contato" class="contato">
-        <h2>Fale Conosco</h2>
-        <p>Email, telefone e redes sociais.</p>
-      </section>
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 fw-bold" style="color: var(--cor-destaque);">DressUp</h5>
+          <p>Seu estilo, sua identidade. Encontre as melhores peças para expressar quem você é.</p>
+        </div>
+
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 fw-bold">Categorias</h5>
+          <p><a href="#" class="text-white" style="text-decoration: none;">Camisas</a></p>
+          <p><a href="#" class="text-white" style="text-decoration: none;">Calças</a></p>
+          <p><a href="#" class="text-white" style="text-decoration: none;">Vestidos</a></p>
+          <p><a href="#" class="text-white" style="text-decoration: none;">Acessórios</a></p>
+        </div>
+
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 fw-bold">Contato</h5>
+          <p><i class="bi bi-geo-alt-fill me-2"></i>Rio de Janeiro, RJ, Brasil</p>
+          <p><i class="bi bi-envelope-fill me-2"></i>contato@dressup.com</p>
+          <p><i class="bi bi-telephone-fill me-2"></i>(21) 99999-8888</p>
+        </div>
+
+      </div>
+
+      <hr class="my-3">
+
+      <div class="row align-items-center">
+        <div class="col-md-7 col-lg-8">
+          <p>&copy; 2025 DressUp. Todos os direitos reservados.</p>
+        </div>
+        <div class="col-md-5 col-lg-4">
+          <div class="text-center text-md-end">
+            <a href="#" class="text-white me-3"><i class="bi bi-facebook h4"></i></a>
+            <a href="#" class="text-white me-3"><i class="bi bi-instagram h4"></i></a>
+            <a href="#" class="text-white"><i class="bi bi-twitter-x h4"></i></a>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <p class="copy">&copy; 2025 DressUp. Todos os direitos reservados.</p>
   </footer>
 
   <script>
-    // Filtrar produtos por categoria
-    const buttons = document.querySelectorAll('.filter button');
-    const cards = document.querySelectorAll('.produto-card');
-    buttons.forEach(btn => {
+    const filterButtons = document.querySelectorAll('.filter button');
+    const productCards = document.querySelectorAll('.produto-card');
+
+    filterButtons.forEach(btn => {
       btn.addEventListener('click', () => {
-        // ativa botão
-        buttons.forEach(b => b.classList.remove('active'));
+        // Ativa/desativa o botão
+        document.querySelector('.filter button.active').classList.remove('active');
         btn.classList.add('active');
+
         const cat = btn.dataset.cat;
-        cards.forEach(card => {
-          card.style.display = (cat === 'all' || card.dataset.category === cat) ? 'flex' : 'none';
+
+        productCards.forEach(card => {
+          // Usamos as classes de display do Bootstrap para esconder/mostrar
+          const isVisible = (cat === 'all' || card.dataset.category === cat);
+          if (isVisible) {
+            card.classList.remove('d-none');
+          } else {
+            card.classList.add('d-none');
+          }
         });
       });
     });
   </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
