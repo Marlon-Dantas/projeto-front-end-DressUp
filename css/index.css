@@ -1,135 +1,91 @@
-:root {
-    --color1: #aa9f65;
-    --color2: #123458;
-    --color3: #35b133;
-    --color4: #dd1111;
-    --color5: #ffffff;
-    --color6: #000000;
-    --color7: #4b4b4be1;
-}
+/* css/home.css */
 
+/* Definição da paleta de cores para consistência */
+:root {
+  --cor-destaque: #aa9f65;
+  --cor-fundo: #ffffff;
+  --cor-texto-escuro: #212529;
+  --cor-cinza: #4b4b4be1;
+}
 
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+  background-color: var(--cor-fundo);
+  /* ADICIONADO: Espaçamento no topo para a navbar fixa não cobrir o conteúdo */
+  padding-top: 56px; 
 }
 
-
-
-.banner {
-    background-image: url(../imagens/foto-fundo-tela1.jpg);
-    /* Caminho da imagem */
-    background-size: cover;
-    /* Faz a imagem cobrir toda a área */
-    background-position: center;
-    /* Centraliza a imagem */
-    height: 300px;
-    /* Altura do banner (pode ajustar) */
-    width: 100%;
-    /* Ocupa toda a largura */
-    color: white;
-    /* Cor do texto, se tiver */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+/* ==================== SEÇÃO HERO (PRINCIPAL) ==================== */
+.hero-section {
+  position: relative;
+  /* Ajustado para não precisar do padding-top da navbar, já que o body cuida disso */
+  height: calc(100vh - 56px); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
 }
 
-.banner h1 {
-    font-size: 3em;
-    text-shadow: 2px 2px 10px rgb(0, 0, 0);
-    /* Melhora legibilidade do texto */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../imagens/foto-fundo-2.jpg'); /* Verifique o caminho da imagem */
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.5);
+  z-index: -1;
 }
 
-
-
-
-.navbar {
-    background-color: #000000;
-    padding: 15px 30px;
-    border-bottom: 0.5px solid var(--color3);
+.hero-content {
+  max-width: 600px;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
 }
 
-.nav-list {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    margin: 0;
-    padding: 0;
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
 }
 
-.nav-list li a {
-    text-decoration: none;
-    color: #ffffff;
-    /*cor do txt do link "<a>"*/
-    font-weight: bold;
-    /*fonte*/
-    transition: color 0.3s;
-    /*escurece ao passar o mouse*/
+/* ==================== BOTÃO CUSTOMIZADO ==================== */
+.btn-custom {
+  background-color: var(--cor-destaque);
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.75rem 2rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
 }
 
-.nav-list li a:hover {
-    color: var(--color1);
-    /* Cor ao passar o mouse */
+.btn-custom:hover {
+  background-color: #928650;
+  color: white;
 }
 
-h1 {
-    text-align: center;
+/* ==================== SEÇÃO DESTAQUES ==================== */
+.destaques-section .card {
+  border: 1px solid #eee;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
-
-
-
-/* test */
-
-
-.container {
-    position: relative;
-    /* conjunto de cod q faz a imagem ocupar toda tela*/
-    display: inline-block;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+.destaques-section .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
-.foto-fundo-2 {
-    width: 100%;
-    /* Ajuste conforme necessário */
-    height: auto;
+.destaques-section .card-img-top {
+  height: 300px;
+  object-fit: cover;
 }
 
-.caixa-cadastro {
-    position: absolute;
-    top: 50%;
-    /* Ajusta a posição da caixa verticalmente */
-    left: 50%;
-    /* Ajusta a posição da caixa horizontalmente */
-    transform: translate(-50%, -50%);
-    /* Centraliza a caixa */
-    background-color: var(--color1);
-    /* Fundo semitransparente */
-    color: #000000;
-    padding: 30px;
-    text-align: center;
-}
-
-button {
-    padding: 15px 30px;
-    background-color: #000000;
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
-}
-
-a {
-    text-decoration: none;
-    color: #ffffff;
-    transition: color 0.3s;
-    font-weight: bold;
-}
-
-a:hover {
-    color: var(--color7);
+.destaques-section .price {
+  color: var(--cor-destaque);
+  font-weight: bold;
 }

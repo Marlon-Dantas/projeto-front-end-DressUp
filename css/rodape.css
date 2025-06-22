@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #343a40;
+    color: white;
+}
+
+header {
+    background-color: #343a40;
+    padding: 0;
+    text-align: center;
+}
+h2 {
+    color: white;
+    font-size: 24px;
+    margin: 0;
+    text-align: center;
+}
+p {
+    color: white;
+    font-size: 16px;
+    margin: 0;
+    text-align: center;
+}
+.social {
+    display: flex;
+    justify-content: center;
+    margin-top: 2px;
+    color: white;
+}
+footer {
+    background-color: #212529;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
