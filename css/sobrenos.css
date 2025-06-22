@@ -1,54 +1,69 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--color1);
-    color: #2d2d2d;
-    margin: 0;
-    padding: 40px;
-    line-height: 1.8;
-}
-
-header {
-    background-color: #1f1f1f;
-    color: #ffffff;
-    padding: 30px;
-    text-align: center;
-}
-
-h1 {
-    margin: 0;
-    font-size: 36px;
-}
-
-section {
-    max-width: 900px;
-    margin: 40px auto;
-}
-
-h2 {
-    color: #1f1f1f;
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 5px;
-}
-
-p {
-    font-size: 18px;
-    margin-bottom: 25px;
-}
-
-.quote {
-    font-style: italic;
-    color: #555;
-    margin: 30px 0;
-    padding-left: 20px;
-    border-left: 4px solid #999;
-}
-
+/* Definição da paleta de cores em variáveis CSS */
 :root {
-    --color1: #aa9f65;
-    --color2: #123458;
-    --color3: #35b133;
-    --color4: #dd1111;
-    --color5: #ffffff;
-    --color6: #000000;
-    --color7: #4b4b4be1;
+  --cor-destaque: #aa9f65; /* Bege */
+  --cor-fundo: #ffffff;    /* Branco */
+  --cor-texto: #212529;    /* Preto padrão do Bootstrap */
+  --cor-cinza: #4b4b4be1; /* Cinza para textos secundários ou fundos */
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+}
+
+/* ==================== NAVBAR ==================== */
+/* As regras da navbar podem ser as mesmas da outra página, mas é bom tê-las aqui também */
+.navbar.bg-dark {
+  background-color: #000000 !important;
+  border-bottom: 1px solid var(--cor-destaque);
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  margin: 0 0.5rem;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--cor-destaque);
+}
+
+/* ==================== PÁGINA SOBRE NÓS ==================== */
+
+/* Estilo do banner principal (hero) */
+.hero-banner {
+  background-color: var(--cor-cinza);
+}
+
+/* Estilo da citação */
+.blockquote {
+    font-size: 1.5rem;
+    color: #555;
+    border-left: 5px solid var(--cor-destaque);
+    padding-left: 1.5rem;
+}
+
+/* Estilo dos ícones de Missão, Visão e Valores */
+.icon-destaque {
+    color: var(--cor-destaque);
+}
+
+/* Botão customizado (reaproveitando o estilo da página de produtos) */
+.btn-custom {
+  background-color: var(--cor-destaque);
+  color: var(--cor-fundo);
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.75rem 2rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+}
+
+.btn-custom:hover {
+  background-color: #928650;
+  color: var(--cor-fundo);
 }
