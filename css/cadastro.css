@@ -1,100 +1,142 @@
+/* === Estilo Geral da Página === */
 body {
-    background-image: url(../imagens/foto-fundo-tela1.jpg);
-    color: white;
+    /* É importante que o caminho para a imagem esteja correto */
+    background-image: url('../imagens/foto-fundo-tela1.jpg'); 
     background-size: cover;
     background-position: center;
-    height: auto;
-    width: 100%;
-    padding: 0; 
+    background-attachment: fixed; /* Mantém o fundo fixo ao rolar */
+    font-family: Arial, sans-serif;
+    color: white; /* Cor padrão do texto para a página */
     
+    /* Remove margens e preenchimentos para ocupar a tela toda */
+    margin: 0;
+    padding: 40px 20px; /* Adiciona um respiro nas laterais e no topo/fundo */
+    min-height: 100vh;
+    box-sizing: border-box;
 }
 
+/* === Container do Formulário === */
 form {
     background-color: transparent;
-    border: 4px solid white;
-    border-radius: 60px;
-    padding: 50px;
-    margin: auto;
-    width: 90%;
-    max-width: 400px;
-    
-    
-    font-family: Arial, sans-serif;
-}
-
-form input, form button {
-    display: block;
-    width: 97%;
-    margin-bottom: 13px;
-    padding: 10px;
-    border: 1px solid white;
-    border-radius: 8px;
-    font-size: 14px;
-}
-
-form input:focus {
-    outline: none;
-    border-color: var(--color4);
-    box-shadow: 0 0 5px var(--color4);
-}
-
-form button {
-    background-color: white;
-    color: black;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-form button:hover {
-    background-color: rgb(1, 1, 9);
-    color: white;
-}
-
-:root {
-    --color1: #444444;
-    --color2: #fcf7d1;
-    --color3: #a9a17a;
-    --color4: #b52c00;
-    --color5: #8c0005;
-  }
-
-
-fieldset {
-    border: 2px solid transparent;
-    color: white;
+    border: 4px solid white; /* Borda um pouco mais fina */
+    border-radius: 25px; /* Raio de borda mais sutil */
+    padding: 30px 40px; /* Padding interno */
+    margin: auto; /* Centraliza o formulário na página */
+    width: 100%;
+    max-width: 500px; /* Limita a largura máxima em telas grandes */
+    backdrop-filter: blur(5px); /* Efeito de desfoque no fundo */
 }
 
 h1 {
     text-align: center;
-    margin-bottom: 20px;
-    color: white
-    
+    color: white;
+    font-size: 30px;
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
 }
+
+/* === Estrutura Interna (Fieldset e Legend) === */
+fieldset {
+    border: none; /* Remove a borda padrão do fieldset */
+    padding: 0;
+    margin: 0;
+}
+
+legend {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+    width: 100%; /* Faz a legenda ocupar a largura toda */
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+/* === Campos do Formulário (Inputs, Labels, Select) === */
+
+/* Estilo para as legendas dos campos (Nome:, Email:, etc.) */
+label {
+    display: block; /* Faz cada label ocupar uma linha */
+    margin-top: 15px; /* Espaçamento acima de cada label */
+    margin-bottom: 5px; /* Pequeno espaço entre a label e o input */
+    font-weight: bold;
+}
+
+/* Estilo unificado para todos os campos de input e o select */
 input[type="text"],
-input[type="email"], input[type="password"], input[type="tel"], input[type="date"] {
-    background-color: transparent;
-    color: white;
-    border: 2px solid white;
-    border-radius: 15px;
-    padding: 15px;
-    font-size: 15px;
-}
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"],
 select {
+    display: block;
+    width: 100%; /* Ocupa 100% da largura do formulário */
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 2px solid white;
+    border-radius: 8px;
+    font-size: 15px;
     background-color: transparent;
     color: white;
-    border: 2px solid white;
-    border-radius: 15px;
-    padding: 15px;
-    font-size: 15px;
-    text-align: center;
-    display: block;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura */
 }
 
+/* Remove o fundo branco padrão do autofill do Chrome */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #333 inset !important;
+    -webkit-text-fill-color: white !important;
+}
 
+/* Estilo para as opções do dropdown */
+select option {
+    background-color: white; /* Fundo branco para melhor leitura */
+    color: black;
+}
+
+/* Remove a div extra que estava em volta do select de gênero */
+.genero {
+    margin: 0;
+    padding: 0;
+}
+
+/* === Grupo de Botões === */
 .button-group {
- 
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    gap: 15px; /* Espaço entre os botões */
+    margin-top: 30px; /* Espaço acima dos botões */
+}
+
+/* Estilo unificado para os botões dentro do grupo */
+.button-group button {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid white; /* Adiciona uma borda para o estado normal */
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Transição suave */
+}
+
+/* Botão de Criar Conta (principal) */
+button[type="submit"] {
+    background-color: white;
+    color: black;
+}
+
+button[type="submit"]:hover {
+    background-color: transparent;
+    color: white;
+}
+
+/* Botão de Limpar (secundário) */
+button[type="reset"] {
+    background-color: transparent;
+    color: white;
+}
+
+button[type="reset"]:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }

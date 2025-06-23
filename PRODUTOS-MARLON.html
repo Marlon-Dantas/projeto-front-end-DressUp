@@ -16,44 +16,45 @@
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="index.html">DressUp</a>
+      <a class="navbar-brand" href="index.html">DressUp</a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto align-items-center">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="SOBRE-NOS-JOAO.HTML">Sobre Nós</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="PRODUTOS-MARLON.html">Nossos Produtos</a>
-                </li>
-                
-                <li class="nav-item" id="nav-login">
-                    <a class="nav-link" href="TELA-LOGIN-PAULO.html">Login</a>
-                </li>
-                
-                <li class="nav-item d-none" id="nav-logout">
-                    <a class="nav-link" href="#" id="logout-button">Logout</a>
-                </li>
-                
-                <li class="nav-item d-none" id="nav-cart">
-                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#cartModal">
-                        <i class="bi bi-cart-fill fs-5"></i>
-                        <span class="badge rounded-pill bg-danger" id="cart-count">0</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="SOBRE-NOS-JOAO.HTML">Sobre Nós</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="PRODUTOS-MARLON.html">Nossos Produtos</a>
+          </li>
+
+          <li class="nav-item" id="nav-login">
+            <a class="nav-link" href="TELA-LOGIN-PAULO.html">Login</a>
+          </li>
+
+          <li class="nav-item d-none" id="nav-logout">
+            <a class="nav-link" href="#" id="logout-button">Logout</a>
+          </li>
+
+          <li class="nav-item d-none" id="nav-cart">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#cartModal">
+              <i class="bi bi-cart-fill fs-5"></i>
+              <span class="badge rounded-pill bg-danger" id="cart-count">0</span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
-</nav>
+  </nav>
 
   <main>
     <section id="home" class="banner text-center text-white py-5">
@@ -75,256 +76,249 @@
           <button data-cat="acessorios" class="btn btn-outline-dark">Acessórios</button>
         </div>
 
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
 
-            <div class="col produto-card" 
-                data-category="camisas" 
-                data-product-id="1" 
-                data-name="Camisa Social Branca" 
-                data-price="119.90"
-                data-img="imagens/produtos/camisa social branca.webp">
-                <div class="card h-100 shadow-sm">
-                    <img src="imagens/produtos/camisa social branca.webp" class="card-img-top" alt="Camisa Social Branca">
-                    <div class="card-body d-flex flex-column">
-                        <h3 class="card-title h5">Camisa Social Branca</h3>
-                        <p class="card-text">Elegância e estilo para ambientes formais.</p>
-                        <span class="price fs-5 fw-bold my-2">R$ 119,90</span>
-                        <button class="btn btn-custom mt-auto add-to-cart-btn">Saiba Mais</button>
-                    </div>
-                </div>
+    <div class="col produto-card" data-category="camisas" data-product-id="1" data-name="Camisa Social Branca" data-price="119.90" data-img="imagens/produtos/camisa social branca.webp">
+        <div class="card h-100 shadow-sm">
+            <img src="imagens/produtos/camisa social branca.webp" class="card-img-top" alt="Camisa Social Branca">
+            <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Camisa Social Branca</h3>
+                <p class="card-text">Elegância e estilo para ambientes formais.</p>
+                <span class="price fs-5 fw-bold my-2">R$ 119,90</span>
+                <button class="btn btn-custom mt-auto add-to-cart-btn">Saiba Mais</button>
             </div>
+        </div>
+    </div>
 
-          <div class="col produto-card" data-category="camisas">
-            <div class="card h-100 shadow-sm">
-              <img src="imagens/produtos/camisa social azul.webp" class="card-img-top" alt="Camisa Social Azul">
-              <div class="card-body d-flex flex-column">
+    <div class="col produto-card" data-category="camisas" data-product-id="2" data-name="Camisa Social Azul" data-price="129.90" data-img="imagens/produtos/camisa social azul.webp">
+        <div class="card h-100 shadow-sm">
+            <img src="imagens/produtos/camisa social azul.webp" class="card-img-top" alt="Camisa Social Azul">
+            <div class="card-body d-flex flex-column">
                 <h3 class="card-title h5">Camisa Social Azul</h3>
                 <p class="card-text">Conforto e sofisticação para o trabalho.</p>
                 <span class="price fs-5 fw-bold my-2">R$ 129,90</span>
-                <a href="#" class="btn btn-custom mt-auto">Saiba Mais</a>
-              </div>
+                <button class="btn btn-custom mt-auto add-to-cart-btn">Saiba Mais</button>
             </div>
-          </div>
+        </div>
+    </div>
 
-          <div class="col produto-card" data-category="camisas">
-            <div class="card h-100 shadow-sm">
-              <img src="imagens/produtos/camisa polo preta.webp" class="card-img-top" alt="Camisa Polo Preta">
-              <div class="card-body d-flex flex-column">
+    <div class="col produto-card" data-category="camisas" data-product-id="3" data-name="Camisa Polo Preta" data-price="89.90" data-img="imagens/produtos/camisa polo preta.webp">
+        <div class="card h-100 shadow-sm">
+            <img src="imagens/produtos/camisa polo preta.webp" class="card-img-top" alt="Camisa Polo Preta">
+            <div class="card-body d-flex flex-column">
                 <h3 class="card-title h5">Camisa Polo Preta</h3>
                 <p class="card-text">Estilo casual com toque esportivo.</p>
                 <span class="price fs-5 fw-bold my-2">R$ 89,90</span>
-                <a href="#" class="btn btn-custom mt-auto">Saiba Mais</a>
-              </div>
+                <button class="btn btn-custom mt-auto add-to-cart-btn">Saiba Mais</button>
             </div>
-          </div>
+        </div>
+    </div>
 
-          <div class="col produto-card" data-category="camisas">
-            <div class="card h-100 shadow-sm">
-              <img src="imagens/produtos/camisa xadres vermelha.jpg" class="card-img-top" alt="Camisa Xadrez Vermelha">
-              <div class="card-body d-flex flex-column">
+    <div class="col produto-card" data-category="camisas" data-product-id="4" data-name="Camisa Xadrez Vermelha" data-price="99.90" data-img="imagens/produtos/camisa xadres vermelha.jpg">
+        <div class="card h-100 shadow-sm">
+            <img src="imagens/produtos/camisa xadres vermelha.jpg" class="card-img-top" alt="Camisa Xadrez Vermelha">
+            <div class="card-body d-flex flex-column">
                 <h3 class="card-title h5">Camisa Xadrez Vermelha</h3>
                 <p class="card-text">Ideal para um visual casual moderno.</p>
                 <span class="price fs-5 fw-bold my-2">R$ 99,90</span>
-                <a href="#" class="btn btn-custom mt-auto">Saiba Mais</a>
-              </div>
+                <button class="btn btn-custom mt-auto add-to-cart-btn">Saiba Mais</button>
             </div>
-          </div>
+        </div>
+    </div>
 
-          <div class="col produto-card" data-category="camisas">
-            <div class="card h-100 shadow-sm">
-              <img src="imagens/produtos/camisa listrada cinza.jpg" class="card-img-top" alt="Camisa Listrada Cinza">
-              <div class="card-body d-flex flex-column">
+    <div class="col produto-card" data-category="camisas" data-product-id="5" data-name="Camisa Listrada Cinza" data-price="109.90" data-img="imagens/produtos/camisa listrada cinza.jpg">
+        <div class="card h-100 shadow-sm">
+            <img src="imagens/produtos/camisa listrada cinza.jpg" class="card-img-top" alt="Camisa Listrada Cinza">
+            <div class="card-body d-flex flex-column">
                 <h3 class="card-title h5">Camisa Listrada Cinza</h3>
                 <p class="card-text">Design moderno com listras sutis.</p>
                 <span class="price fs-5 fw-bold my-2">R$ 109,90</span>
-                <a href="#" class="btn btn-custom mt-auto">Saiba Mais</a>
-              </div>
+                <button class="btn btn-custom mt-auto add-to-cart-btn">Saiba Mais</button>
             </div>
-          </div>
+        </div>
+    </div>
 
-          <div class="col produto-card" data-category="calcas">
-            <div class="card h-100 shadow-sm">
-              <img src="imagens/produtos/calça skinny.jpg" class="card-img-top" alt="Calça Jeans Skinny">
-              <div class="card-body d-flex flex-column">
+    <div class="col produto-card" data-category="calcas" data-product-id="6" data-name="Calça Jeans Skinny" data-price="159.90" data-img="imagens/produtos/calça skinny.jpg">
+        <div class="card h-100 shadow-sm">
+            <img src="imagens/produtos/calça skinny.jpg" class="card-img-top" alt="Calça Jeans Skinny">
+            <div class="card-body d-flex flex-column">
                 <h3 class="card-title h5">Calça Jeans Skinny</h3>
                 <p class="card-text">Corte moderno e ajuste perfeito para o dia a dia.</p>
                 <span class="price fs-5 fw-bold my-2">R$ 159,90</span>
-                <a href="#" class="btn btn-custom mt-auto">Saiba Mais</a>
-              </div>
+                <button class="btn btn-custom mt-auto add-to-cart-btn">Saiba Mais</button>
             </div>
-          </div>
+        </div>
+    </div>
 
-          <div class="col produto-card" data-category="calcas">
-            <div class="card h-100 shadow-sm">
-              <img src="imagens/produtos/calça jeans reta.jpg" class="card-img-top" alt="Calça Jeans Reta">
-              <div class="card-body d-flex flex-column">
+    <div class="col produto-card" data-category="calcas" data-product-id="7" data-name="Calça Jeans Reta" data-price="149.90" data-img="imagens/produtos/calça jeans reta.jpg">
+        <div class="card h-100 shadow-sm">
+            <img src="imagens/produtos/calça jeans reta.jpg" class="card-img-top" alt="Calça Jeans Reta">
+            <div class="card-body d-flex flex-column">
                 <h3 class="card-title h5">Calça Jeans Reta</h3>
                 <p class="card-text">Versátil e confortável para qualquer ocasião.</p>
                 <span class="price fs-5 fw-bold my-2">R$ 149,90</span>
-                <a href="#" class="btn btn-custom mt-auto">Saiba Mais</a>
-              </div>
+                <button class="btn btn-custom mt-auto add-to-cart-btn">Saiba Mais</button>
             </div>
-          </div>
+        </div>
+    </div>
 
-          <div class="col produto-card" data-category="calcas">
-            <div class="card h-100 shadow-sm">
-              <img src="imagens/produtos/calça de alfaiataria.jpg" class="card-img-top"
-                alt="Calça de Alfaiataria Preta">
-              <div class="card-body d-flex flex-column">
+    <div class="col produto-card" data-category="calcas" data-product-id="8" data-name="Calça de Alfaiataria Preta" data-price="199.90" data-img="imagens/produtos/calça de alfaiataria.jpg">
+        <div class="card h-100 shadow-sm">
+            <img src="imagens/produtos/calça de alfaiataria.jpg" class="card-img-top" alt="Calça de Alfaiataria Preta">
+            <div class="card-body d-flex flex-column">
                 <h3 class="card-title h5">Calça de Alfaiataria</h3>
                 <p class="card-text">Perfeita para ambientes formais com acabamento sofisticado.</p>
                 <span class="price fs-5 fw-bold my-2">R$ 199,90</span>
-                <a href="#" class="btn btn-custom mt-auto">Saiba Mais</a>
-              </div>
+                <button class="btn btn-custom mt-auto add-to-cart-btn">Saiba Mais</button>
             </div>
-          </div>
+        </div>
+    </div>
 
-          <div class="col produto-card" data-category="calcas">
-            <div class="card h-100 shadow-sm">
-              <img src="imagens/produtos/calça cargo verde.jpg" class="card-img-top" alt="Calça Cargo Verde">
-              <div class="card-body d-flex flex-column">
+    <div class="col produto-card" data-category="calcas" data-product-id="9" data-name="Calça Cargo Verde" data-price="139.90" data-img="imagens/produtos/calça cargo verde.jpg">
+        <div class="card h-100 shadow-sm">
+            <img src="imagens/produtos/calça cargo verde.jpg" class="card-img-top" alt="Calça Cargo Verde">
+            <div class="card-body d-flex flex-column">
                 <h3 class="card-title h5">Calça Cargo Verde</h3>
                 <p class="card-text">Funcional e estilosa, com bolsos utilitários.</p>
                 <span class="price fs-5 fw-bold my-2">R$ 139,90</span>
-                <a href="#" class="btn btn-custom mt-auto">Saiba Mais</a>
-              </div>
+                <button class="btn btn-custom mt-auto add-to-cart-btn">Saiba Mais</button>
             </div>
-          </div>
+        </div>
+    </div>
 
-          <div class="col produto-card" data-category="calcas">
-            <div class="card h-100 shadow-sm">
-              <img src="imagens/produtos/calça sarja bege.jpg" class="card-img-top" alt="Calça de Sarja Bege">
-              <div class="card-body d-flex flex-column">
+    <div class="col produto-card" data-category="calcas" data-product-id="10" data-name="Calça de Sarja Bege" data-price="129.90" data-img="imagens/produtos/calça sarja bege.jpg">
+        <div class="card h-100 shadow-sm">
+            <img src="imagens/produtos/calça sarja bege.jpg" class="card-img-top" alt="Calça de Sarja Bege">
+            <div class="card-body d-flex flex-column">
                 <h3 class="card-title h5">Calça de Sarja Bege</h3>
                 <p class="card-text">Praticidade e conforto para o cotidiano.</p>
                 <span class="price fs-5 fw-bold my-2">R$ 129,90</span>
-                <a href="#" class="btn btn-custom mt-auto">Saiba Mais</a>
-              </div>
+                <button class="btn btn-custom mt-auto add-to-cart-btn">Saiba Mais</button>
             </div>
-          </div>
+        </div>
+    </div>
 
-          <div class="col produto-card" data-category="acessorios">
-            <div class="card h-100 shadow-sm">
-              <img src="imagens/produtos/cinto de couro marrom.jpg" class="card-img-top" alt="Cinto de Couro Marrom">
-              <div class="card-body d-flex flex-column">
+    <div class="col produto-card" data-category="acessorios" data-product-id="11" data-name="Cinto de Couro Marrom" data-price="59.90" data-img="imagens/produtos/cinto de couro marrom.jpg">
+        <div class="card h-100 shadow-sm">
+            <img src="imagens/produtos/cinto de couro marrom.jpg" class="card-img-top" alt="Cinto de Couro Marrom">
+            <div class="card-body d-flex flex-column">
                 <h3 class="card-title h5">Cinto de Couro Marrom</h3>
                 <p class="card-text">Acabamento premium em couro legítimo.</p>
                 <span class="price fs-5 fw-bold my-2">R$ 59,90</span>
-                <a href="#" class="btn btn-custom mt-auto">Saiba Mais</a>
-              </div>
+                <button class="btn btn-custom mt-auto add-to-cart-btn">Saiba Mais</button>
             </div>
-          </div>
+        </div>
+    </div>
 
-          <div class="col produto-card" data-category="acessorios">
-            <div class="card h-100 shadow-sm">
-              <img src="imagens/produtos/bone preto classico.jpg" class="card-img-top" alt="Boné Preto Clássico">
-              <div class="card-body d-flex flex-column">
+    <div class="col produto-card" data-category="acessorios" data-product-id="12" data-name="Boné Preto Clássico" data-price="49.90" data-img="imagens/produtos/bone preto classico.jpg">
+        <div class="card h-100 shadow-sm">
+            <img src="imagens/produtos/bone preto classico.jpg" class="card-img-top" alt="Boné Preto Clássico">
+            <div class="card-body d-flex flex-column">
                 <h3 class="card-title h5">Boné Preto Clássico</h3>
                 <p class="card-text">Design atemporal e versátil para qualquer look.</p>
                 <span class="price fs-5 fw-bold my-2">R$ 49,90</span>
-                <a href="#" class="btn btn-custom mt-auto">Saiba Mais</a>
-              </div>
+                <button class="btn btn-custom mt-auto add-to-cart-btn">Saiba Mais</button>
             </div>
-          </div>
+        </div>
+    </div>
 
-          <div class="col produto-card" data-category="acessorios">
-            <div class="card h-100 shadow-sm">
-              <img src="imagens/produtos/oculos de sool retro.jpg" class="card-img-top" alt="Óculos de Sol Retro">
-              <div class="card-body d-flex flex-column">
+    <div class="col produto-card" data-category="acessorios" data-product-id="13" data-name="Óculos de Sol Retro" data-price="89.90" data-img="imagens/produtos/oculos de sool retro.jpg">
+        <div class="card h-100 shadow-sm">
+            <img src="imagens/produtos/oculos de sool retro.jpg" class="card-img-top" alt="Óculos de Sol Retro">
+            <div class="card-body d-flex flex-column">
                 <h3 class="card-title h5">Óculos de Sol Retro</h3>
                 <p class="card-text">Proteção e estilo com armação clássica.</p>
                 <span class="price fs-5 fw-bold my-2">R$ 89,90</span>
-                <a href="#" class="btn btn-custom mt-auto">Saiba Mais</a>
-              </div>
+                <button class="btn btn-custom mt-auto add-to-cart-btn">Saiba Mais</button>
             </div>
-          </div>
+        </div>
+    </div>
 
-          <div class="col produto-card" data-category="acessorios">
-            <div class="card h-100 shadow-sm">
-              <img src="imagens/produtos/relogio minimalista.jpg" class="card-img-top" alt="Relógio Minimalista">
-              <div class="card-body d-flex flex-column">
+    <div class="col produto-card" data-category="acessorios" data-product-id="14" data-name="Relógio Minimalista" data-price="199.90" data-img="imagens/produtos/relogio minimalista.jpg">
+        <div class="card h-100 shadow-sm">
+            <img src="imagens/produtos/relogio minimalista.jpg" class="card-img-top" alt="Relógio Minimalista">
+            <div class="card-body d-flex flex-column">
                 <h3 class="card-title h5">Relógio Minimalista</h3>
                 <p class="card-text">Design clean que complementa qualquer visual.</p>
                 <span class="price fs-5 fw-bold my-2">R$ 199,90</span>
-                <a href="#" class="btn btn-custom mt-auto">Saiba Mais</a>
-              </div>
+                <button class="btn btn-custom mt-auto add-to-cart-btn">Saiba Mais</button>
             </div>
-          </div>
+        </div>
+    </div>
 
-          <div class="col produto-card" data-category="acessorios">
-            <div class="card h-100 shadow-sm">
-              <img src="imagens/produtos/pulseira de couro.jpg" class="card-img-top" alt="Pulseira de Couro">
-              <div class="card-body d-flex flex-column">
+    <div class="col produto-card" data-category="acessorios" data-product-id="15" data-name="Pulseira de Couro" data-price="39.90" data-img="imagens/produtos/pulseira de couro.jpg">
+        <div class="card h-100 shadow-sm">
+            <img src="imagens/produtos/pulseira de couro.jpg" class="card-img-top" alt="Pulseira de Couro">
+            <div class="card-body d-flex flex-column">
                 <h3 class="card-title h5">Pulseira de Couro</h3>
                 <p class="card-text">Detalhe sofisticado para valorizar seu pulso.</p>
                 <span class="price fs-5 fw-bold my-2">R$ 39,90</span>
-                <a href="#" class="btn btn-custom mt-auto">Saiba Mais</a>
-              </div>
+                <button class="btn btn-custom mt-auto add-to-cart-btn">Saiba Mais</button>
             </div>
-          </div>
+        </div>
+    </div>
 
-          <div class="col produto-card" data-category="vestidos">
-            <div class="card h-100 shadow-sm">
-              <img src="imagens/produtos/vestido flora leve.jpg" class="card-img-top" alt="Vestido Floral Leve">
-              <div class="card-body d-flex flex-column">
+    <div class="col produto-card" data-category="vestidos" data-product-id="16" data-name="Vestido Floral Leve" data-price="139.90" data-img="imagens/produtos/vestido flora leve.jpg">
+        <div class="card h-100 shadow-sm">
+            <img src="imagens/produtos/vestido flora leve.jpg" class="card-img-top" alt="Vestido Floral Leve">
+            <div class="card-body d-flex flex-column">
                 <h3 class="card-title h5">Vestido Floral Leve</h3>
                 <p class="card-text">Estampa delicada e fluida, perfeita para o verão.</p>
                 <span class="price fs-5 fw-bold my-2">R$ 139,90</span>
-                <a href="#" class="btn btn-custom mt-auto">Saiba Mais</a>
-              </div>
+                <button class="btn btn-custom mt-auto add-to-cart-btn">Saiba Mais</button>
             </div>
-          </div>
+        </div>
+    </div>
 
-          <div class="col produto-card" data-category="vestidos">
-            <div class="card h-100 shadow-sm">
-              <img src="imagens/produtos/vestido preto elegante.jpg" class="card-img-top" alt="Vestido Preto Elegante">
-              <div class="card-body d-flex flex-column">
+    <div class="col produto-card" data-category="vestidos" data-product-id="17" data-name="Vestido Preto Elegante" data-price="199.90" data-img="imagens/produtos/vestido preto elegante.jpg">
+        <div class="card h-100 shadow-sm">
+            <img src="imagens/produtos/vestido preto elegante.jpg" class="card-img-top" alt="Vestido Preto Elegante">
+            <div class="card-body d-flex flex-column">
                 <h3 class="card-title h5">Vestido Preto Elegante</h3>
                 <p class="card-text">Clássico e sofisticado para eventos especiais.</p>
                 <span class="price fs-5 fw-bold my-2">R$ 199,90</span>
-                <a href="#" class="btn btn-custom mt-auto">Saiba Mais</a>
-              </div>
+                <button class="btn btn-custom mt-auto add-to-cart-btn">Saiba Mais</button>
             </div>
-          </div>
+        </div>
+    </div>
 
-          <div class="col produto-card" data-category="vestidos">
-            <div class="card h-100 shadow-sm">
-              <img src="imagens/produtos/vestido midi azul.jpg" class="card-img-top" alt="Vestido Midi Azul">
-              <div class="card-body d-flex flex-column">
+    <div class="col produto-card" data-category="vestidos" data-product-id="18" data-name="Vestido Midi Azul" data-price="169.90" data-img="imagens/produtos/vestido midi azul.jpg">
+        <div class="card h-100 shadow-sm">
+            <img src="imagens/produtos/vestido midi azul.jpg" class="card-img-top" alt="Vestido Midi Azul">
+            <div class="card-body d-flex flex-column">
                 <h3 class="card-title h5">Vestido Midi Azul</h3>
                 <p class="card-text">Comprimento ideal para um visual moderno e delicado.</p>
                 <span class="price fs-5 fw-bold my-2">R$ 169,90</span>
-                <a href="#" class="btn btn-custom mt-auto">Saiba Mais</a>
-              </div>
+                <button class="btn btn-custom mt-auto add-to-cart-btn">Saiba Mais</button>
             </div>
-          </div>
+        </div>
+    </div>
 
-          <div class="col produto-card" data-category="vestidos">
-            <div class="card h-100 shadow-sm">
-              <img src="imagens/produtos/vestido longo vermelho.jpg" class="card-img-top" alt="Vestido Longo Vermelho">
-              <div class="card-body d-flex flex-column">
+    <div class="col produto-card" data-category="vestidos" data-product-id="19" data-name="Vestido Longo Vermelho" data-price="229.90" data-img="imagens/produtos/vestido longo vermelho.jpg">
+        <div class="card h-100 shadow-sm">
+            <img src="imagens/produtos/vestido longo vermelho.jpg" class="card-img-top" alt="Vestido Longo Vermelho">
+            <div class="card-body d-flex flex-column">
                 <h3 class="card-title h5">Vestido Longo Vermelho</h3>
                 <p class="card-text">Impactante e vibrante para ocasiões marcantes.</p>
                 <span class="price fs-5 fw-bold my-2">R$ 229,90</span>
-                <a href="#" class="btn btn-custom mt-auto">Saiba Mais</a>
-              </div>
+                <button class="btn btn-custom mt-auto add-to-cart-btn">Saiba Mais</button>
             </div>
-          </div>
+        </div>
+    </div>
 
-          <div class="col produto-card" data-category="vestidos">
-            <div class="card h-100 shadow-sm">
-              <img src="imagens/produtos/vestido curto estampado.jpg" class="card-img-top"
-                alt="Vestido Curto Estampado">
-              <div class="card-body d-flex flex-column">
+    <div class="col produto-card" data-category="vestidos" data-product-id="20" data-name="Vestido Curto Estampado" data-price="149.90" data-img="imagens/produtos/vestido curto estampado.jpg">
+        <div class="card h-100 shadow-sm">
+            <img src="imagens/produtos/vestido curto estampado.jpg" class="card-img-top" alt="Vestido Curto Estampado">
+            <div class="card-body d-flex flex-column">
                 <h3 class="card-title h5">Vestido Curto Estampado</h3>
                 <p class="card-text">Modelo divertido com estampa única para dias casuais.</p>
                 <span class="price fs-5 fw-bold my-2">R$ 149,90</span>
-                <a href="#" class="btn btn-custom mt-auto">Saiba Mais</a>
-              </div>
+                <button class="btn btn-custom mt-auto add-to-cart-btn">Saiba Mais</button>
             </div>
-          </div>
-
         </div>
+    </div>
+
+</div>
     </section>
   </main>
 
@@ -372,23 +366,23 @@
   </footer>
 
   <div class="modal fade" id="cartModal" tabindex="-1">
-      <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-              <div class="modal-header">
-                  <h5 class="modal-title">Meu Carrinho</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-              </div>
-              <div class="modal-body" id="cart-items"></div>
-              <div class="modal-footer">
-                  <p class="me-auto fs-5">Total: <strong id="cart-total">R$ 0,00</strong></p>
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Continuar Comprando</button>
-                  <button type="button" class="btn btn-success" id="clear-cart-btn">Limpar Carrinho</button>
-              </div>
-          </div>
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Meu Carrinho</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body" id="cart-items"></div>
+        <div class="modal-footer">
+          <p class="me-auto fs-5">Total: <strong id="cart-total">R$ 0,00</strong></p>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Continuar Comprando</button>
+          <button type="button" class="btn btn-success" id="clear-cart-btn">Limpar Carrinho</button>
+        </div>
       </div>
+    </div>
   </div>
 
-<script type="module">
+  <script type="module">
     import { isUserLoggedIn, getLoggedInUser, logout, getCart, saveCart } from './js/auth.js';
 
     // --- LÓGICA DE FILTRO (SEU CÓDIGO ORIGINAL) ---
@@ -396,90 +390,90 @@
     const productCards = document.querySelectorAll('.produto-card');
 
     filterButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            document.querySelector('.filter button.active').classList.remove('active');
-            btn.classList.add('active');
-            const cat = btn.dataset.cat;
-            productCards.forEach(card => {
-                card.style.display = (cat === 'all' || card.dataset.category === cat) ? 'block' : 'none';
-            });
+      btn.addEventListener('click', () => {
+        document.querySelector('.filter button.active').classList.remove('active');
+        btn.classList.add('active');
+        const cat = btn.dataset.cat;
+        productCards.forEach(card => {
+          card.style.display = (cat === 'all' || card.dataset.category === cat) ? 'block' : 'none';
         });
+      });
     });
 
     // --- NOVA LÓGICA DE LOGIN E CARRINHO ---
     function updateUserUI() {
-        if (isUserLoggedIn()) {
-            const user = getLoggedInUser();
-            // Atualiza UI para estado "logado"
-            document.getElementById('nav-login').classList.add('d-none');
-            document.getElementById('nav-logout').classList.remove('d-none');
-            document.getElementById('nav-cart').classList.remove('d-none');
-            document.getElementById('logout-button').addEventListener('click', (e) => {
-                e.preventDefault();
-                logout();
-            });
+      if (isUserLoggedIn()) {
+        const user = getLoggedInUser();
+        // Atualiza UI para estado "logado"
+        document.getElementById('nav-login').classList.add('d-none');
+        document.getElementById('nav-logout').classList.remove('d-none');
+        document.getElementById('nav-cart').classList.remove('d-none');
+        document.getElementById('logout-button').addEventListener('click', (e) => {
+          e.preventDefault();
+          logout();
+        });
 
-            // Altera botões dos produtos
-            document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
-                btn.textContent = 'Adicionar ao Carrinho';
-                btn.disabled = false;
-                btn.title = '';
-            });
-        } else {
-            // Atualiza UI para estado "deslogado"
-            document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
-                btn.textContent = 'Faça Login para Comprar';
-                btn.disabled = true;
-                btn.title = 'Você precisa estar logado para adicionar itens ao carrinho.';
-            });
-        }
-        updateCartIcon();
+        // Altera botões dos produtos
+        document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
+          btn.textContent = 'Adicionar ao Carrinho';
+          btn.disabled = false;
+          btn.title = '';
+        });
+      } else {
+        // Atualiza UI para estado "deslogado"
+        document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
+          btn.textContent = 'Faça Login para Comprar';
+          btn.disabled = true;
+          btn.title = 'Você precisa estar logado para adicionar itens ao carrinho.';
+        });
+      }
+      updateCartIcon();
     }
 
     function handleAddToCart(event) {
-        if (!isUserLoggedIn()) {
-            alert('Por favor, faça login para adicionar produtos ao carrinho.');
-            return;
-        }
+      if (!isUserLoggedIn()) {
+        alert('Por favor, faça login para adicionar produtos ao carrinho.');
+        return;
+      }
 
-        const card = event.target.closest('.produto-card');
-        const productId = card.dataset.productId;
-        const name = card.dataset.name;
-        const price = parseFloat(card.dataset.price);
-        const img = card.dataset.img;
+      const card = event.target.closest('.produto-card');
+      const productId = card.dataset.productId;
+      const name = card.dataset.name;
+      const price = parseFloat(card.dataset.price);
+      const img = card.dataset.img;
 
-        let cart = getCart();
-        const existingItem = cart.find(item => item.id === productId);
+      let cart = getCart();
+      const existingItem = cart.find(item => item.id === productId);
 
-        if (existingItem) {
-            existingItem.quantity++;
-        } else {
-            cart.push({ id: productId, name, price, img, quantity: 1 });
-        }
+      if (existingItem) {
+        existingItem.quantity++;
+      } else {
+        cart.push({ id: productId, name, price, img, quantity: 1 });
+      }
 
-        saveCart(cart);
-        updateCartIcon();
-        alert(`${name} foi adicionado ao carrinho!`);
+      saveCart(cart);
+      updateCartIcon();
+      alert(`${name} foi adicionado ao carrinho!`);
     }
-    
+
     function updateCartIcon() {
-        const cart = getCart();
-        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-        document.getElementById('cart-count').textContent = totalItems;
+      const cart = getCart();
+      const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+      document.getElementById('cart-count').textContent = totalItems;
     }
 
     function displayCartItems() {
-        const cart = getCart();
-        const cartItemsContainer = document.getElementById('cart-items');
-        const cartTotalElement = document.getElementById('cart-total');
-        cartItemsContainer.innerHTML = '';
-        let total = 0;
+      const cart = getCart();
+      const cartItemsContainer = document.getElementById('cart-items');
+      const cartTotalElement = document.getElementById('cart-total');
+      cartItemsContainer.innerHTML = '';
+      let total = 0;
 
-        if (cart.length === 0) {
-            cartItemsContainer.innerHTML = '<p>Seu carrinho está vazio.</p>';
-        } else {
-            cart.forEach(item => {
-                cartItemsContainer.innerHTML += `
+      if (cart.length === 0) {
+        cartItemsContainer.innerHTML = '<p>Seu carrinho está vazio.</p>';
+      } else {
+        cart.forEach(item => {
+          cartItemsContainer.innerHTML += `
                     <div class="d-flex justify-content-between align-items-center mb-3">
                         <img src="${item.img}" width="50" class="rounded">
                         <div>
@@ -488,37 +482,37 @@
                         </div>
                         <span class="text-muted">R$ ${(item.price * item.quantity).toFixed(2).replace('.', ',')}</span>
                     </div>`;
-                total += item.price * item.quantity;
-            });
-        }
-        cartTotalElement.textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
+          total += item.price * item.quantity;
+        });
+      }
+      cartTotalElement.textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
     }
 
     // --- INICIALIZAÇÃO DA PÁGINA ---
     document.addEventListener('DOMContentLoaded', () => {
-        updateUserUI();
-        
-        // Adiciona listener para todos os botões de adicionar ao carrinho
-        document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
-            btn.addEventListener('click', handleAddToCart);
-        });
+      updateUserUI();
 
-        // Atualiza o modal sempre que ele for aberto
-        document.getElementById('cartModal').addEventListener('show.bs.modal', displayCartItems);
-        
-        // Limpa o carrinho
-        document.getElementById('clear-cart-btn').addEventListener('click', () => {
-            if(confirm('Tem certeza que deseja limpar o carrinho?')){
-                saveCart([]);
-                updateCartIcon();
-                displayCartItems();
-            }
-        });
+      // Adiciona listener para todos os botões de adicionar ao carrinho
+      document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
+        btn.addEventListener('click', handleAddToCart);
+      });
+
+      // Atualiza o modal sempre que ele for aberto
+      document.getElementById('cartModal').addEventListener('show.bs.modal', displayCartItems);
+
+      // Limpa o carrinho
+      document.getElementById('clear-cart-btn').addEventListener('click', () => {
+        if (confirm('Tem certeza que deseja limpar o carrinho?')) {
+          saveCart([]);
+          updateCartIcon();
+          displayCartItems();
+        }
+      });
     });
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 
-  </body>
+</body>
 
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,20 +8,102 @@
     <title>Dress Up Login</title>
     <style>
         /* Mantendo o seu CSS original, com pequenos ajustes */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { display: flex; font-family: 'Arial Narrow Bold', sans-serif; justify-content: center; align-items: center; min-height: 100vh; background: url(./imagens/foto-fundo2.png) center/cover no-repeat; }
-        .container { width: 420px; background-color: transparent; border: 2px solid rgba(255, 255, 255, .2); color: #fff; padding: 30px 40px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); backdrop-filter: blur(4px); border-radius: 10px; }
-        .container h1 { font-size: 36px; text-align: center; color: #fff; font-weight: bold; }
-        .input-box { position: relative; width: 100%; height: 50px; margin: 30px 0; }
-        .input-box input { width: 100%; height: 100%; background-color: transparent; border-radius: 40px; border: 2px solid rgba(255, 255, 255, .2); outline: none; font-size: 16px; color: #fff; padding: 20px 45px 20px 20px; }
-        .input-box input::placeholder { color: #fff; }
-        .input-box i { position: absolute; right: 20px; font-size: 20px; top: 50%; transform: translateY(-50%); }
-        .login-btn { width: 100%; height: 50px; background-color: #ffffff; border: none; border-radius: 40px; cursor: pointer; font-size: 16px; color: #333; font-weight: 600; box-shadow: 0 0 10px rgba(0, 0, 0.1); margin-top: 20px; }
-        .register-link { font-size: 14.5px; text-align: center; margin: 20px 0 15px; }
-        .register-link p a { color: #fff; text-decoration: none; font-weight: 600; }
-        .register-link p a:hover { text-decoration: underline; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            font-family: 'Arial Narrow Bold', sans-serif;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url(./imagens/foto-fundo2.png) center/cover no-repeat;
+        }
+
+        .container {
+            width: 420px;
+            background-color: transparent;
+            border: 2px solid rgba(255, 255, 255, .2);
+            color: #fff;
+            padding: 30px 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(4px);
+            border-radius: 10px;
+        }
+
+        .container h1 {
+            font-size: 36px;
+            text-align: center;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .input-box {
+            position: relative;
+            width: 100%;
+            height: 50px;
+            margin: 30px 0;
+        }
+
+        .input-box input {
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            border-radius: 40px;
+            border: 2px solid rgba(255, 255, 255, .2);
+            outline: none;
+            font-size: 16px;
+            color: #fff;
+            padding: 20px 45px 20px 20px;
+        }
+
+        .input-box input::placeholder {
+            color: #fff;
+        }
+
+        .input-box i {
+            position: absolute;
+            right: 20px;
+            font-size: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .login-btn {
+            width: 100%;
+            height: 50px;
+            background-color: #ffffff;
+            border: none;
+            border-radius: 40px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #333;
+            font-weight: 600;
+            box-shadow: 0 0 10px rgba(0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .register-link {
+            font-size: 14.5px;
+            text-align: center;
+            margin: 20px 0 15px;
+        }
+
+        .register-link p a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .register-link p a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
+
 <body>
     <main class="container">
         <form id="loginForm">
@@ -40,40 +123,41 @@
         </form>
     </main>
 
-<script>
-    document.getElementById('loginForm').addEventListener('submit', function (event) {
-        event.preventDefault();
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+            event.preventDefault();
 
-        // Usamos .trim() para remover espaços em branco acidentais
-        const email = document.getElementById('email').value.trim();
-        const senha = document.getElementById('senha').value.trim();
+            // Usamos .trim() para remover espaços em branco acidentais
+            const email = document.getElementById('email').value.trim();
+            const senha = document.getElementById('senha').value.trim();
 
-        if (!email || !senha) {
-            alert('Por favor, preencha ambos os campos.');
-            return;
-        }
-
-        const users = JSON.parse(localStorage.getItem('users')) || [];
-
-        // PASSO 1: Encontrar o usuário APENAS pelo e-mail
-        const userByEmail = users.find(user => user.email === email);
-
-        if (!userByEmail) {
-            // Se não encontrou o e-mail, o usuário não existe.
-            alert('Usuário não encontrado. Verifique o e-mail ou cadastre-se.');
-        } else {
-            // PASSO 2: Se encontrou o e-mail, AGORA verifica a senha.
-            if (userByEmail.senha === senha) {
-                // Sucesso! A senha corresponde.
-                sessionStorage.setItem('loggedInUser', JSON.stringify(userByEmail));
-                alert('Login bem-sucedido! Bem-vindo(a), ' + userByEmail.nome + '!');
-                window.location.href = 'PRODUTOS-MARLON.html'; // Redireciona para a página de produtos
-            } else {
-                // O e-mail está certo, mas a senha está errada.
-                alert('Senha incorreta. Por favor, tente novamente.');
+            if (!email || !senha) {
+                alert('Por favor, preencha ambos os campos.');
+                return;
             }
-        }
-    });
-</script>
+
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+
+            // PASSO 1: Encontrar o usuário APENAS pelo e-mail
+            const userByEmail = users.find(user => user.email === email);
+
+            if (!userByEmail) {
+                // Se não encontrou o e-mail, o usuário não existe.
+                alert('Usuário não encontrado. Verifique o e-mail ou cadastre-se.');
+            } else {
+                // PASSO 2: Se encontrou o e-mail, AGORA verifica a senha.
+                if (userByEmail.senha === senha) {
+                    // Sucesso! A senha corresponde.
+                    sessionStorage.setItem('loggedInUser', JSON.stringify(userByEmail));
+                    alert('Login bem-sucedido! Bem-vindo(a), ' + userByEmail.nome + '!');
+                    window.location.href = 'PRODUTOS-MARLON.html'; // Redireciona para a página de produtos
+                } else {
+                    // O e-mail está certo, mas a senha está errada.
+                    alert('Senha incorreta. Por favor, tente novamente.');
+                }
+            }
+        });
+    </script>
 </body>
+
 </html>
