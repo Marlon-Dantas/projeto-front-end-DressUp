@@ -118,7 +118,7 @@
             </div>
             <button type="submit" class="login-btn">Login</button>
             <div class="register-link">
-                <p>Não tem uma conta? <a href="CADASTRO-RICARDO.html">Cadastre-se</a></p>
+                <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
             </div>
         </form>
     </main>
@@ -150,7 +150,7 @@
                     // Sucesso! A senha corresponde.
                     sessionStorage.setItem('loggedInUser', JSON.stringify(userByEmail));
                     alert('Login bem-sucedido! Bem-vindo(a), ' + userByEmail.nome + '!');
-                    window.location.href = 'PRODUTOS-MARLON.html'; // Redireciona para a página de produtos
+                    window.location.href = 'produtos.html'; // Redireciona para a página de produtos
                 } else {
                     // O e-mail está certo, mas a senha está errada.
                     alert('Senha incorreta. Por favor, tente novamente.');

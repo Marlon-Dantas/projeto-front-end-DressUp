@@ -130,5 +130,5 @@ document.querySelector('form').addEventListener("submit", (event) => {
     localStorage.setItem('users', JSON.stringify(users));
 
     alert('Cadastro realizado com sucesso! Você será redirecionado para a página de login.');
-    window.location.href = 'TELA-LOGIN-PAULO.html';
+    window.location.href = 'login.html';
 });
