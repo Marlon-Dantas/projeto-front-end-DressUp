@@ -13,9 +13,7 @@ export function getLoggedInUser() {
 // Função para fazer logout
 export function logout() {
     sessionStorage.removeItem('loggedInUser');
-    // Opcional: remover o carrinho ao fazer logout
-    // localStorage.removeItem('cart');
-    window.location.href = 'TELA-LOGIN-PAULO.html'; // Redireciona para a página de login
+    window.location.reload(); // Recarrega a página para atualizar a UI
 }
 
 // Função para obter o carrinho de compras do localStorage

@@ -1,7 +1,7 @@
-const validarFormulario = () => {
-    const campos = document.querySelectorAll("input[required]");
+// Função para validar campos obrigatórios
+const validarCamposObrigatorios = () => {
+    const campos = document.querySelectorAll("input[required], select[required]");
     let formularioValido = true;
-
     campos.forEach((campo) => {
         if (!campo.value.trim()) {
             formularioValido = false;
@@ -10,119 +10,103 @@ const validarFormulario = () => {
             campo.style.borderColor = "";
         }
     });
-
-    if (!formularioValido) {
-        alert("Por favor, preencha todos os campos obrigatórios.");
-    }
-
     return formularioValido;
 };
 
-document.getElementById("formulario").addEventListener("submit", (event) => {
-    if (!validarFormulario()) {
-        event.preventDefault();
+// Função para validar CPF
+const validarCPF = (cpf) => {
+    cpf = cpf.replace(/[^\d]+/g, '');
+    if (cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) return false;
+    let soma = 0, resto;
+    for (let i = 1; i <= 9; i++) soma += parseInt(cpf.substring(i-1, i)) * (11 - i);
+    resto = (soma * 10) % 11;
+    if ((resto === 10) || (resto === 11)) resto = 0;
+    if (resto !== parseInt(cpf.substring(9, 10))) return false;
+    soma = 0;
+    for (let i = 1; i <= 10; i++) soma += parseInt(cpf.substring(i-1, i)) * (12 - i);
+    resto = (soma * 10) % 11;
+    if ((resto === 10) || (resto === 11)) resto = 0;
+    if (resto !== parseInt(cpf.substring(10, 11))) return false;
+    return true;
+};
+
+// Event listener principal do formulário
+document.querySelector('form').addEventListener("submit", (event) => {
+    event.preventDefault(); // Previne o envio automático para podermos validar tudo
+
+    // --- Executa todas as validações ---
+    if (!validarCamposObrigatorios()) {
+        alert("Por favor, preencha todos os campos obrigatórios.");
+        return;
     }
+
+    const senha = document.getElementById("senha").value;
+    const confirmarSenha = document.getElementById("confirmarSenha").value;
+    if (senha !== confirmarSenha) {
+        alert("As senhas não coincidem. Por favor, verifique.");
+        return;
+    }
+    
+    if (senha.length < 6) {
+        alert("A senha deve ter no mínimo 6 caracteres.");
+        return;
+    }
+
+    const cpf = document.getElementById("cpf").value;
+    if (!validarCPF(cpf)) {
+        alert("CPF inválido. Por favor, verifique.");
+        return;
+    }
+
+    // --- Se todas as validações passaram, coleta os dados ---
+    const form = event.target;
+    const formData = new FormData(form);
+    const userData = Object.fromEntries(formData.entries()); // Cria um objeto com todos os dados do formulário
+
+    // --- Lógica de Salvamento ---
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+    const userExists = users.some(user => user.email === userData.email);
+
+    if (userExists) {
+        alert('Este e-mail já está cadastrado.');
+        return;
+    }
+
+    users.push(userData);
+    localStorage.setItem('users', JSON.stringify(users));
+
+    alert('Cadastro realizado com sucesso! Você será redirecionado para a página de login.');
+    window.location.href = 'TELA-LOGIN-PAULO.html';
 });
 
-const eNumero = (numero) => /^\[0-9]+$/.test(numero);
-const ecepValido = (cep) => cep.length == 8 && eNumero(cep);
+// A lógica de CEP permanece a mesma, mas com correções
 const limparFormulario = () => {
-    document.getElementById("endereço").value = "";
+    document.getElementById("endereco").value = "";
     document.getElementById("estado").value = "";
 }
-const preencherFormulario = (endereço) => {
-    document.getElementById("endereço").value = "endereço.logradouro";
-    document.getElementById("estado").value = "endereço.uf";
+
+const preencherFormulario = (endereco) => {
+    document.getElementById("endereco").value = endereco.logradouro;
+    document.getElementById("estado").value = endereco.uf;
 }
+
 const pesquisarCep = async () => {
     limparFormulario();
-
-    const cep = document.getElementById("cep").value.replace("-", "");
+    const cep = document.getElementById("cep").value.replace(/\D/g, '');
     const url = `https://viacep.com.br/ws/${cep}/json/`;
-    if (ecepValido(cep)) {
-        const dados = await fetch(url)
-        await dados.json()
-    if (endereço.hasOwnProperty("erro")) {
-            document.getElementById("endereço").value = "CEP não encontrado.";
+
+    if (cep.length === 8) {
+        const response = await fetch(url);
+        const endereco = await response.json();
+        
+        if (endereco.hasOwnProperty("erro")) {
+            document.getElementById("endereco").value = "CEP não encontrado.";
+        } else {
+            preencherFormulario(endereco);
         }
-        else {
-            preencherFormulario(endereço);
-        }
-    }
-    else {
-        document.getElementById("endereço").value = "CEP inválido.";
+    } else {
+        document.getElementById("endereco").value = "CEP inválido.";
     }
 }
 
 document.getElementById("cep").addEventListener("focusout", pesquisarCep);
-
-document.getElementById("formulario").addEventListener("submit", (event) => {
-    const senha = document.getElementById("senha").value;
-    const confirmarSenha = document.getElementById("confirmarSenha").value;
-
-    if (senha !== confirmarSenha) {
-        event.preventDefault();
-        alert("As senhas não coincidem. Por favor, verifique.");
-    }
-});
-
-const validarCPF = (cpf) => {
-    cpf = cpf.replace(/[^\d]+/g, '');
-    if (cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) return false;
-
-    const calcularDigito = (base) => {
-        let soma = 0;
-        for (let i = 0; i < base.length; i++) {
-            soma += parseInt(base.charAt(i)) * (base.length + 1 - i);
-        }
-        const resto = soma % 11;
-        return resto < 2 ? 0 : 11 - resto;
-    };
-
-    const base = cpf.substring(0, 9);
-    const digito1 = calcularDigito(base);
-    const digito2 = calcularDigito(base + digito1);
-
-    return cpf === base + digito1 + digito2;
-};
-
-document.getElementById("formulario").addEventListener("submit", (event) => {
-    const cpf = document.getElementById("cpf").value;
-
-    if (!validarCPF(cpf)) {
-        event.preventDefault();
-        alert("CPF inválido. Por favor, verifique.");
-    }
-});
-document.getElementById("formulario").addEventListener("submit", (event) => {
-    const nome = document.getElementById("nome").value.trim();
-    const telefoneCelular = document.getElementById("telefoneCelular").value.trim();
-    const telefoneFixo = document.getElementById("telefoneFixo").value.trim();
-    const login = document.getElementById("login").value.trim();
-    const senha = document.getElementById("senha").value.trim();
-
-    const nomeValido = /^[a-zA-Z\s]{15,80}$/.test(nome);
-    const telefoneValido = /^\(\+55\)\d{2}-\d{8}$/.test(telefoneCelular) && /^\(\+55\)\d{2}-\d{8}$/.test(telefoneFixo);
-    const loginValido = /^[a-zA-Z]{6}$/.test(login);
-    const senhaValida = /^[a-zA-Z]{8}$/.test(senha);
-
-    if (!nomeValido) {
-        event.preventDefault();
-        alert("O campo Nome deve ter entre 15 e 80 caracteres alfabéticos.");
-    }
-
-    if (!telefoneValido) {
-        event.preventDefault();
-        alert("Os campos Telefone Celular e Telefone Fixo devem estar no formato (+55)XX-XXXXXXXX.");
-    }
-
-    if (!loginValido) {
-        event.preventDefault();
-        alert("O campo Login deve ter exatamente 6 caracteres alfabéticos.");
-    }
-
-    if (!senhaValida) {
-        event.preventDefault();
-        alert("O campo Senha deve ter exatamente 8 caracteres alfabéticos.");
-    }
-});
